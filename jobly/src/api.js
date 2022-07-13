@@ -46,8 +46,12 @@ class JoblyApi {
   // obviously, you'll add a lot here ...
   static async getCompanies() {
     let res = await this.request(`companies`)
-    // console.log("Hello from getCompanies")
     return res.companies
+  }
+
+  static async getJobs() {
+    let res = await this.request(`jobs`)
+    return res.jobs
   }
 }
 
