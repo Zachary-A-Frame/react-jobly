@@ -1,2 +1,2 @@
 # react-jobly
-To get started, npm i, npm server.js, cd jobly, npm run. 
+To get started, npm i, node server.js, cd jobly, npm run. 
