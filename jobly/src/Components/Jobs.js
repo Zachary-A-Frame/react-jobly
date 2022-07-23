@@ -7,20 +7,19 @@ const Jobs = () => {
 
     return (
         <div >
-            {console.log(jobs)}
+            {/* {console.log(jobs)} */}
 
             {jobs.map(job =>
-                    <button key={job.id} className="company">
-                        <div>
-                            <h4>
-                                <div style={{ float: 'left', textAlign: "center" }}>Title: {job.title}</div>
-                                <p>{job.companyHandle}</p>
-                            </h4>
-                        </div>
-                        <br></br>
-                        <p style={{ marginTop: "3%", textAlign: "left" }}>Salary: {job.salary}</p>
-                    </button>
-
+                <button key={job.id + ' ' + job.title} className="company">
+                    <div>
+                        <h4>
+                            <div style={{ float: 'left', textAlign: "center" }}>Title: {job.title}</div>
+                            <p>{job.companyHandle}</p>
+                        </h4>
+                    </div>
+                    <br></br>
+                    <p style={{ marginTop: "3%", textAlign: "left" }}>Salary: {job.salary}</p>
+                </button>
             )}
         </div>
     )

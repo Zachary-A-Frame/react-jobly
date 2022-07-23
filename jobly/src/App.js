@@ -13,10 +13,13 @@ import Companies from './Components/Companies';
 import Jobs from "./Components/Jobs"
 import Navbar from "./Components/Navbar";
 import Company from "./Components/Company"
+import Signup from "./Components/Signup"
+import Login from "./Components/Login"
 
 function App() {
   const [companies, setCompanies] = useState([])
   const [jobs, setJobs] = useState([])
+  // const [currUser, setCurrUser] = useState()
 
   useEffect(() => {
     async function getCompanies() {
@@ -35,6 +38,8 @@ function App() {
         <CompanyContext.Provider value={{ companies, jobs }}>
           <Switch>
             <Route exact path="/" element={<h1>Home</h1>} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="login" element={<Login />} />
             <Route exact path="/companies" element={<Companies />} />
             <Route path="companies/:handle" element={<Company />} />
             <Route exact path="/jobs" element={<Jobs />} />
